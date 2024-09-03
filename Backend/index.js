@@ -10,7 +10,7 @@ Dashboard.use(express.json());
 Dashboard.use(cookieparser());
 Dashboard.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://admin-dashboard-82t7vz7kv-debash1sh-pandas-projects.vercel.app",
     credentials: true,
   })
 );
