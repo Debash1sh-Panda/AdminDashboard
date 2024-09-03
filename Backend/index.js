@@ -1,0 +1,30 @@
+const express = require("express");
+const cors = require("cors");
+const cookieparser = require("cookie-parser");
+require("dotenv").config();
+
+const Dashboard = express();
+const PORT = process.env.PORT || 2002;
+
+Dashboard.use(express.json());
+Dashboard.use(cookieparser());
+Dashboard.use(
+  cors({
+    origin: "http://localhost:3000", // Corrected this line
+    credentials: true,
+  })
+);
+
+require("./database").databaseConnection();
+
+// APIs
+const userRoute = require("./routes/route.user.js");
+Dashboard.use("/api/user", userRoute);
+
+Dashboard.listen(PORT, () => {
+  console.log(`Running on .. ${PORT}`);
+});
+
+Dashboard.get("/", (req, res) => {
+  res.send("WELCOME TO Dashboard");
+});

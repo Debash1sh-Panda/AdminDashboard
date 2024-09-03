@@ -1,0 +1,1 @@
+export const BASE_URL_API_USER = "http://localhost:2002/api/user";
