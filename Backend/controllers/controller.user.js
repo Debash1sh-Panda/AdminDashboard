@@ -80,6 +80,7 @@ exports.login = async (req, res) => {
 
     const tokenData = {
       userId: user._id,
+      role: user.role
     };
 
     const token = jwt.sign(tokenData, process.env.SECRET_TOKEN_KEY, {
