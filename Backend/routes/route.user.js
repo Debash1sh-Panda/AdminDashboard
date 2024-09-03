@@ -6,7 +6,7 @@ const isAuthenticated = require('../middleware/isAuthenticated.js');
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/logout',isAuthenticated, logout);
+router.get('/logout',logout);
 router.get('/get-all-users',isAuthenticated, getAllUsers);
 
 module.exports = router;

@@ -10,7 +10,7 @@ Dashboard.use(express.json());
 Dashboard.use(cookieparser());
 Dashboard.use(
   cors({
-    origin: "http://localhost:3000", // Corrected this line
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
