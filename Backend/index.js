@@ -10,7 +10,7 @@ Dashboard.use(express.json());
 Dashboard.use(cookieparser());
 Dashboard.use(
   cors({
-    origin: "https://admin-dashboard-fznxacubj-debash1sh-pandas-projects.vercel.app/",
+    origin: "https://admin-dashboard-fznxacubj-debash1sh-pandas-projects.vercel.app",
     credentials: true,
   })
 );
